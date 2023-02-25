@@ -15,3 +15,14 @@ https://cdnjs.com/libraries/modern-normalize
     clip-path: inset(50%);
     margin: -1px;
 }
+
+//? паттерн фиксации панели навигации
+<header class="scroll"></header>
+div.header {
+    display: flex;
+}
+const { height: pageHeaderHeight } = document
+.querySelector('.scroll')
+.getBoundingClientRect();
+
+document.body.style.paddingTop = `${pageHeaderHeight}px`;

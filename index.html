@@ -23,14 +23,16 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <header>
+    <header class="scroll">
       <div class="container header">
         <nav class="list-nav">
           <a class="logo reset" href=""
             >WEB<span class="nav-span">STUDIO</span></a
           >
           <ul class="nav-pages reset">
-            <li><a class="site-nav reset" href="./index.html">Studio</a></li>
+            <li>
+              <a class="site-nav reset" href="./index.html">Studio</a>
+            </li>
             <li>
               <a class="site-nav reset" href="./portfolio.html">Portfolio</a>
             </li>
@@ -59,7 +61,7 @@
       <section class="hero">
         <div class="container">
             <h1 class="hero-title">Effective Solutions for Your Business</h1>
-            <button class="hero-button" type="button">Order Service</button>
+            <button data-modal-open class="hero-button" type="button">Order Service</button>
         </div>
       </section>
       <section class="sectionOne section">
@@ -483,6 +485,20 @@
         </div>
       </div>
     </footer>
+<!-- модальное окно -->
+    <div data-modal class="backdrop is-hidden">
+      <div class="modal">
+        <button data-modal-close class="bnt-close">
+            <svg class="icon-close">
+              <use href="./img/icons.svg#icon-close"></use>
+            </svg>
+        </button>
+      </div>
+    </div>
+<!-- фиксация навигации -->
+    <script src="./scripts/scripts.js"></script>
+<!-- открытия модального окна -->
+    <script src="./scripts/modal.js"></script>
   </body>
 </html>
 
